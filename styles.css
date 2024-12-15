@@ -1,60 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Alexey Nechaev">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css">
-  <title>Pharmacy Survey Form</title>
-  </head>
-  <body>
-    <main>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      <!--Header-->
-    <h1 id="title">Pharmacy Survey Form</h1>
-    <p id="description">Thank you for taking your time to fill out this form</p>
+html{
+  width: 100%;
+  background-image: linear-gradient(
+      -110deg,
+      rgba(96, 185, 18, 0.2),
+      rgba(233, 236, 231, 0.2)
+    ),
+    url(https://media.istockphoto.com/id/1410288886/video/blurred-view-of-stocked-pharmacy-shelves-in-a-chemist-or-hospital-with-copyspace-pharmacy-and.jpg?s=640x640&k=20&c=VfZkeJUZ3s9t0rjTtQA2j6MuDC1k0WjKlH-T8S-DSq8=);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: Verdana, sans-serif;
+}
+main{
+  background: rgba(75, 133, 24, 0.6);
+  margin: auto;
+  width: 75%;
+  height: 100%;
+  border-radius: 0.5em;
+}
 
-      <!--Form-->
-    <form id="survey-form">
-      <div class="form-element">
-        <label id="name-label" for="name">Name</label>
-        <input id="name" required type="text" placeholder="Paul Smith"/>
-      </div>
-      <div class="form-element">
-        <label id="email-label" for="email">Email</label>  
-        <input id="email" required type="email" placeholder="paul@smith.com"/>
-      </div>
-      <div class="form-element">
-        <label>What is your role?</label>  
-        <label class="check"><input type="radio" name ="Role" value="Pharmacist" checked/> Pharmacist</label>    
-        <label class="check"><input type="radio" name ="Role" value="Pharmacy Technician"/> Pharmacy Technician</label>
-      </div>
-      <div class="form-element">
-        <label id="number-label" for="number">Experience (in years)</label>
-        <input id="number" required type="number" min="1" max="50" placeholder="1"/>
-      </div>
-      <div class="form-element">
-        <label>What is your credentials?</label>
-        <label class="check"><input type="checkbox" value="Registred"/> Registered or Licensed</label>
-        <label class="check"><input type="checkbox" value="Certified"/> Certified</label>
-      </div>
-      <div class="form-element">
-        <label for="dropdown">What is your main goal?</label>
-        <select id="dropdown" required>
-        <option disabled selected value>(please select)</option>
-        <option value="education">Continuing Education</option>
-        <option value="news">Newsletter</option>
-        </select>
-      </div>
-      <div class="form-element textar">
-        <label>Tell us about yourself</label>
-        <textarea id="portfolio" name="portfolio" placeholder="Your story..."></textarea>
-      </div>
-      <div class="button">
-        <input id="submit" type="submit"/>
-      </div>
-    </form>
-    </main>
-  </body>
-</html>
+#title, #description {
+  font-style: bold;
+  margin: auto;
+  text-align: center;
+  padding: 0.1em;
+}
 
+#title{
+  padding-top: 1em;
+  font-size: 2em;
+}
+
+#description{
+  font-style: italic;
+  font-size: 1em;
+}
+div:not(div.textar) {
+  width: 100%;
+  padding-left: 2em;
+  display: block;
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+div.textar  {
+  width: 100%;
+  padding-left: 2em;
+  display: block;
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+form{
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+label.check{
+  font-weight: normal;
+}
+
+label.check input{
+  min-height: 1em;
+}
+
+input:not(label input, #submit), select {
+  width: 90%;
+  margin: auto;
+}
+
+input, select {
+  background: rgba(239, 237, 238, 0.9);
+  height: 2em;
+  border-radius: 0.5em;
+  border-color: black;
+  font-size: 0.8em;
+  padding-left: 0.8em;
+
+}
+
+#portfolio{
+  height: 10em;
+  width: calc(100% - 6em);
+}
+
+.button{
+  text-align: center;
+}
+
+#submit{
+  width: 10em;
+  height: 3em;
+  font-size: 0.8em;
+  color: white;
+  border-radius: 10px;
+  background: blue;
+  border: 3em bold black;
+  cursor: pointer;
+}
+
+#submit:hover{
+  background: red;
+}
+#submit:active{
+  background: purple;
+}
