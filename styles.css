@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alexey Nechaev">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Pharmacy Survey Form</title>
+  </head>
+  <body>
+    <main>
+
+      <!--Header-->
+    <h1 id="title">Pharmacy Survey Form</h1>
+    <p id="description">Thank you for taking your time to fill out this form</p>
+
+      <!--Form-->
+    <form id="survey-form">
+      <div class="form-element">
+        <label id="name-label" for="name">Name</label>
+        <input id="name" required type="text" placeholder="Paul Smith"/>
+      </div>
+      <div class="form-element">
+        <label id="email-label" for="email">Email</label>  
+        <input id="email" required type="email" placeholder="paul@smith.com"/>
+      </div>
+      <div class="form-element">
+        <label>What is your role?</label>  
+        <label class="check"><input type="radio" name ="Role" value="Pharmacist" checked/> Pharmacist</label>    
+        <label class="check"><input type="radio" name ="Role" value="Pharmacy Technician"/> Pharmacy Technician</label>
+      </div>
+      <div class="form-element">
+        <label id="number-label" for="number">Experience (in years)</label>
+        <input id="number" required type="number" min="1" max="50" placeholder="1"/>
+      </div>
+      <div class="form-element">
+        <label>What is your credentials?</label>
+        <label class="check"><input type="checkbox" value="Registred"/> Registered or Licensed</label>
+        <label class="check"><input type="checkbox" value="Certified"/> Certified</label>
+      </div>
+      <div class="form-element">
+        <label for="dropdown">What is your main goal?</label>
+        <select id="dropdown" required>
+        <option disabled selected value>(please select)</option>
+        <option value="education">Continuing Education</option>
+        <option value="news">Newsletter</option>
+        </select>
+      </div>
+      <div class="form-element textar">
+        <label>Tell us about yourself</label>
+        <textarea id="portfolio" name="portfolio" placeholder="Your story..."></textarea>
+      </div>
+      <div class="button">
+        <input id="submit" type="submit"/>
+      </div>
+    </form>
+    </main>
+  </body>
+</html>
+
